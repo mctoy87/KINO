@@ -33,6 +33,9 @@ html
 
 body
     background-color: #fdfdfd
+    height: 100%
+    width: 100%
+    min-height: 100%
 
 .text
     font-size: 14px
@@ -78,7 +81,6 @@ body
 .page-menu
     display: flex
     align-items: center
-    // height: 40px
     &__container
         display: flex
         flex-direction: row
@@ -100,10 +102,12 @@ body
     width: 1140px
 
 .overlay
-    position: relative
+    position: absolute
     width: 100%
     height: 100vh
-    top: -1016px
+    // top: -1016px
+    // top: 100px
+    top: 0px
     z-index: 14
     background-color: rgba(0, 0, 0, .5)
 
@@ -120,9 +124,3 @@ body
     margin: 0 auto
     height: 640px
     width: 340px
-    // transition-duration: .3s
-    // z-index: 14
-    // position: fixed
-    // bottom: 30px
-    // right: 0
-    // top: 0

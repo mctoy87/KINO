@@ -7,7 +7,9 @@ const scrollController = {
         this.scrollPosition = window.scrollY;
         document.body.style.cssText = `
             overflow: hidden;
-            padding-right: ${window.innerWidth - document.body.offsetWidth - 1}px
+            position: fixed;
+            top: -${this.scrollPosition}px;
+            padding-right: ${window.innerWidth - document.body.offsetWidth}px
         `;
         document.documentElement.style.scrollBehavior = 'unset';
     },
@@ -24,11 +26,8 @@ loginButton.addEventListener('click', handleLogin);
 // Event Logic
 function handleLogin(event) {
     overlay.classList.remove('hide');
+    overlay.style.cssText = `
+    padding-right: ${window.innerWidth - document.body.offsetWidth}px
+    `
     scrollController.disabledScroll();
 }
-
-// function handleScroll(event) {
-//     // event.preventDefault();
-//     window.scrollTo(0, 0);
-//     console.log(event);
-// }
