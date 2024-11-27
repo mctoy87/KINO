@@ -1,4 +1,9 @@
-/* line 1, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,36 +15,30 @@
   font-weight: regular;
   font-style: normal;
 }
-
 @font-face {
   font-family: "MManrope";
   src: url("../fonts/Manrope-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "RRoboto";
   src: url("../fonts/Roboto-Regular.ttf");
   font-weight: regular;
   font-style: normal;
 }
-
 @font-face {
   font-family: "RRoboto";
   src: url("../fonts/Roboto-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
-
-/* line 29, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 html {
   font-family: "RRoboto";
   font-weight: regular;
   scroll-behavior: smooth;
 }
 
-/* line 34, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 body {
   background-color: #fdfdfd;
   height: 100%;
@@ -47,45 +46,36 @@ body {
   min-height: 100%;
 }
 
-/* line 40, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .text {
   font-size: 14px;
   font: roboto;
 }
 
-/* line 44, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page {
   margin: 0 auto;
   width: 1140px;
 }
 
-/* line 48, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-header {
   background-color: #5035ff;
   margin: 0 auto;
   height: 100px;
   width: 1140px;
 }
-
-/* line 53, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-header__inner {
   margin: 0 auto;
   max-width: 1040px;
 }
-
-/* line 56, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-header__logo {
   padding-top: 14px;
   height: 70px;
   width: 100px;
 }
 
-/* line 61, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .topnav {
   overflow: hidden;
 }
 
-/* line 64, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .topnav a {
   float: left;
   display: block;
@@ -97,44 +87,34 @@ body {
   border-bottom: 3px solid transparent;
 }
 
-/* line 74, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .topnav a:hover {
   border-bottom: 3px solid blue;
 }
 
-/* line 78, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .topnav a.active {
   border-bottom: 3px solid blue;
 }
 
-/* line 81, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-menu {
   display: flex;
   align-items: center;
 }
-
-/* line 84, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-menu__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 1140px;
 }
-
-/* line 89, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-menu__list {
   padding: 0px 50px;
   width: 800px;
   font-size: 14px;
 }
-
-/* line 93, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-menu__login {
   padding: 0px 50px;
   width: 70px;
 }
 
-/* line 98, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .page-content {
   background-color: #f7f7f7;
   margin: 0 auto;
@@ -142,7 +122,6 @@ body {
   width: 1140px;
 }
 
-/* line 104, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .overlay {
   position: absolute;
   width: 100%;
@@ -152,17 +131,14 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 114, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .hide {
   display: none;
 }
 
-/* line 117, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .fixed {
   position: fixed;
 }
 
-/* line 120, ../../Users/super/JavaScriptProjects/cinema/src/sass/index.sass */
 .form-window {
   position: relative;
   top: 200px;
