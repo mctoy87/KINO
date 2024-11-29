@@ -1,89 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Афиша — Сеть кинотеатров «Star&amp;Mlad». Расписание сеансов, репертуар, афиша, билеты</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Киноафиша</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="./scripts/script.js" defer></script>
 </head>
 <body>
-    <div class="page">
-        <header class="page-header">
-            <div class="page-header__inner">
-                <!-- Логотип cinema-->
-                <a href="#"><img class="page-header__logo" src="./img/film2.png" alt="logo"></a>
-            </div>
-        </header>
-        <!-- Блок навигации -->
-        <nav class="page-menu">
-            <div class="page-menu__container">
-                <div class="page-menu__list topnav text">
-                    <a class="active" href="#">Афиша</a>
-                    <a href="#">Сеансы</a>
-                    <a href="#">Акции и скидки</a>
-                    <a href="#">Аренда и Реклама</a>
-                    <a href="#">О нас</a>
-                    <a href="#">Контакты</a>
-                </div>
-                <div class="page-menu__login topnav text">
-                    <a id="login" href="#">Войти</a>
-                </div>
-            </div>
-        </nav>
-        <main class="page-content">
-            
-            <!-- <div class="page-content__inner">
-                <div class="overlay-order overlay-sidebar-enter-done">
-                    <div class="overlay-header">
-                        <div class="overlay-header__info">
-                            <div class="overlay-header__info-text account-page__header-title">Вход в профиль</div>
-                        </div>
-                        <button class="popup-close-icon">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="25" width="25" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="overlay-content" style="background: white;">
-                        <div class="popup"><form class="login-form">
-                            <div class="login-form__field login-form__field--small-indent">
-                                <div class="text text--small">Электронная почта</div>
-                                <div class="input-content">
-                                    <input autocomplete="on" class="input ym-disable-keys" name="email" placeholder="Ваш email" type="email" inputmode="email" value="">
-                                </div>
-                                <div class="input__error"></div>
-                            </div>
-                            <div class="login-form__field login-form__field--small-indent">
-                                <div class="text text--small">Пароль</div>
-                                <div class="password-switch">
-                                    <div class="input-content">
-                                        <input autocomplete="on" class="input ym-disable-keys" name="password" placeholder="Пароль" type="password" inputmode="text" value="">
-                                    </div>
-                                    <div class="input__error"></div>
-                                    <div class="password-switch__toggle">
-                                        <img src="/img/auth/eye-slash.svg" alt="кнопка показать">
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button login-form__button button--primary disabled" type="submit">Войти</button>
-                                <a class="login-form__link" href="/afisha/3018/account/sign-up">Зарегистрироваться</a>
-                                <a class="login-form__link" href="/afisha/3018/account/pass-recovery-auth">Не помню пароль</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </main>
-        
+  <h1 class="visually-hidden">Главная страница сети кинотетатров "Афиша"</h1>
+  <header class="header">
+    <div class="container">
+      <div class="header__logo-wrap">
+        <a class="header__logo-link" href="#">
+          <img class="header__logo" src="./img/film2.png" alt="logo"/>
+        </a>
+      </div>
     </div>
-    <footer></footer>
-    <div class="modal">
-        <div class="modal__main">
-            <h1 class="modal__title">Модальное окно аутентификации</h1>
-            <div class="modal__container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quod?</p>
-            </div>
-        </div>
+  </header>
+
+  <nav class="heder__nav nav">
+    <div class="container">
+      <div class="nav__wrap">
+        <ul class="nav__list topnav text">
+          <li class="nav__item">
+            <a class="nav__link active" href="#poster">Афиша</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#sessions">Сеансы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#discounts">Акции и скидки</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#advertisment">Аренда и Реклама</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+  
+        <button class="nav__btn" type="button">Войти</button>
+      </div>
     </div>
-    <script src="js/app.js"></script>
+  </nav>
+
+
+
+
+  <main class="main">
+    <h2 class="main__title visually-hidden">Список доступных фильмов</h2>
+    <div class="container">
+      <section class="movies">
+        <article class="movie">
+          <img src="./img/movie-poster1.jpg" alt="Описание выбранного фильма" class="movie__poster">
+          <h3 class="movie__title">Назад в будущее</h3>
+          <div class="movie__description-wrap">
+            <p class="movie__description">16+</p>
+            <p class="movie__description">приключения</p>
+          </div>
+            <ul class="movie__sessions">
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">10:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">13:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">16:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+            </ul>
+        </article>
+
+        <article class="movie">
+          <img src="./img/movie-poster1.jpg" alt="Описание выбранного фильма" class="movie__poster">
+          <h3 class="movie__title">Lorem ipsum dolor sit amet.</h3>
+          <div class="movie__description-wrap">
+            <p class="movie__description">16+</p>
+            <p class="movie__description">приключения</p>
+          </div>
+            <ul class="movie__sessions">
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">10:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">13:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">16:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+            </ul>
+        </article>
+
+        <article class="movie">
+          <img src="./img/movie-poster1.jpg" alt="Описание выбранного фильма" class="movie__poster">
+          <h3 class="movie__title">Назад в будущее</h3>
+          <div class="movie__description-wrap">
+            <p class="movie__description">16+</p>
+            <p class="movie__description">приключения</p>
+          </div>
+            <ul class="movie__sessions">
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">10:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">13:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+              <li class="movie__session">
+                <button class="movie__session-btn" data-session-id="1">
+                  <p class="movie__session-time">16:00</p>
+                  <p class="movie__session-info">
+                    <span class="movie__session-quality">2D</span>
+                    <span class="movie__session-price">от 500 р</span>
+                  </p>
+                </button>
+              </li>
+            </ul>
+        </article>
+
+        <article class="movie">
+          <img src="./img/movie-poster1.jpg" alt="Описание выбранного фильма" class="movie__poster">
+          <h3 class="movie__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, rem?</h3>
+          <div class="movie__description-wrap">
+            <p class="movie__description">16+</p>
+            <p class="movie__description">приключения</p>
+            <p class="movie__description">боевик</p>
+            <p class="movie__description">драма</p>
+            <p class="movie__description">семейное</p>
+          </div>
+          <ul class="movie__sessions">
+            <li class="movie__session">
+              <button class="movie__session-btn" data-session-id="1">
+                <p class="movie__session-time">10:00</p>
+                <p class="movie__session-info">
+                  <span class="movie__session-quality">2D</span>
+                  <span class="movie__session-price">от 500 р</span>
+                </p>
+              </button>
+            </li>
+            <li class="movie__session">
+              <button class="movie__session-btn" data-session-id="1">
+                <p class="movie__session-time">13:00</p>
+                <p class="movie__session-info">
+                  <span class="movie__session-quality">2D</span>
+                  <span class="movie__session-price">от 500 р</span>
+                </p>
+              </button>
+            </li>
+            <li class="movie__session">
+              <button class="movie__session-btn" data-session-id="1">
+                <p class="movie__session-time">16:00</p>
+                <p class="movie__session-info">
+                  <span class="movie__session-quality">2D</span>
+                  <span class="movie__session-price">от 500 р</span>
+                </p>
+              </button>
+            </li>
+          </ul>
+        </article>
+
+        <article class="movie">
+          <img src="./img/movie-poster1.jpg" alt="Описание выбранного фильма" class="movie__poster">
+          <h3 class="movie__title">Назад в будущее</h3>
+          <div class="movie__description-wrap">
+            <p class="movie__description">16+</p>
+            <p class="movie__description">приключения</p>
+          </div>
+          <ul class="movie__sessions">
+            <li class="movie__session">
+              <button class="movie__session-btn" data-session-id="1">
+                <p class="movie__session-time">10:00</p>
+                <p class="movie__session-info">
+                  <span class="movie__session-quality">2D</span>
+                  <span class="movie__session-price">от 500 р</span>
+                </p>
+              </button>
+            </li>
+            <li class="movie__session">
+              <button class="movie__session-btn" data-session-id="1">
+                <p class="movie__session-time">13:00</p>
+                <p class="movie__session-info">
+                  <span class="movie__session-quality">2D</span>
+                  <span class="movie__session-price">от 500 р</span>
+                </p>
+              </button>
+            </li>
+            <li class="movie__session">
+              <button class="movie__session-btn" data-session-id="1">
+                <p class="movie__session-time">16:00</p>
+                <p class="movie__session-info">
+                  <span class="movie__session-quality">2D</span>
+                  <span class="movie__session-price">от 500 р</span>
+                </p>
+              </button>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer></footer>
+  <div class="modal">
+      <div class="modal__main">
+          <h1 class="modal__title">Модальное окно аутентификации</h1>
+          <div class="modal__container">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quod?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum asperiores ipsa. Itaque eligendi architecto eos sunt nobis corporis, culpa nesciunt cupiditate atque tempora explicabo. Eos repellendus ullam officiis soluta delectus deleniti itaque praesentium aspernatur architecto fuga vel expedita error molestias sed nisi debitis officia repudiandae, consequuntur assumenda quam? Exercitationem!</p>
+          </div>
+
+          <button class="modal__close">&#10006;</button>
+      </div>
+  </div>
+  <script src="js/app.js"></script>
 </body>
 </html>

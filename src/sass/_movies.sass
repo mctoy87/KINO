@@ -1,0 +1,68 @@
+.movies
+  padding: 30px 0
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+  justify-content: center
+
+/* Карточка фильма */
+.movie 
+    border: none
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    overflow: hidden
+    width: 240px
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+.movie__poster 
+    width: 100%
+    height: auto
+    border-radius: 15px
+
+.movie__title
+  font-size: 24px
+  line-height: 32px
+
+.movie__description-wrap
+  display: flex
+  gap: 5px
+  flex-wrap: wrap
+
+.movie__description
+  padding: 4px 8px
+  font-size: 12px
+  line-height: 20px
+  border-radius: 4px
+  background-color: #f2f2f5
+  color: #727276
+
+.movie__sessions
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+
+.movie__session
+
+  flex-basis: 70px
+
+.movie__session-btn
+  width: 100%
+  border: 1px solid #32CD32
+  border-radius: 5px
+  overflow: hidden
+
+.movie__session-time
+  background-color: #32CD32
+  padding: 7px 3px
+
+.movie__session-info
+  padding: 3px 
+  display: flex
+  justify-content: space-between
+
+.movie__session-quality,
+.movie__session-price
+  display: inline-block
+  font-size: 10px
+
